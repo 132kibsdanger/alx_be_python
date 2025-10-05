@@ -9,6 +9,8 @@ class TestSimpleCalculator(unittest.TestCase):
         """Test the addition method."""
         self.assertEqual(self.calculator.add(2, 3), 5)
         self.assertEqual(self.calculator.add(-1, 1), 0)
+        self.assertEqual(self.calculator.add(0, 0), 0)
+        self.assertEqual(self.calculator.add(-1, -1), -2)
 
     def test_subtraction(self):
         """Test the subtraction method."""
