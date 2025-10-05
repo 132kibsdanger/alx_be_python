@@ -31,13 +31,13 @@ class Library:
                 return f"You have checked out '{title}'."
         return f"Sorry, '{title}' is not available."
     
-    def return_book(self, title):
+    def return_book(self):
         for book in self.__books:
-            if book.title == title and book.is_checked_out:
-                book._is_checked_out = False
-                return f"You have returned '{title}'."
-        return f"'{title}' was not checked out."
-    
+            if book.title == book.title and book.is_checked_out:
+                book.is_checked_out = False
+                return f"You have returned '{book.title}'."
+        return f"'{book.title}' was not checked out."
+
     def list_available_books(self):
         available_books = [book.title for book in self.__books if not book.is_checked_out]
         return available_books if available_books else "No books are currently available."
