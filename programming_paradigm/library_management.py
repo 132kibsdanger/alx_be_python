@@ -8,6 +8,10 @@ class Book:
     @property
     def is_checked_out(self):
         return self.__is_checked_out
+
+    @is_checked_out.setter
+    def is_checked_out(self, value):
+        self.__is_checked_out = value
     
 class Library:
     def __init__(self):
