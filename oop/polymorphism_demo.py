@@ -16,7 +16,7 @@ class Rectangle(Shape):
 
     @property
     def area(self):
-        area = self.length*self.width
+        area = self.length * self.width
         return area
     
 class Circle(Shape):
